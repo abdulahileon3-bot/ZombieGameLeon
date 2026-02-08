@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zombie FPS</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: black;
+      font-family: Arial, sans-serif;
+    }
+
+    #hud {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      color: white;
+      z-index: 10;
+    }
+
+    #playerHealth {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 220px;
+      height: 22px;
+      border: 2px solid white;
+      z-index: 10;
+    }
+
+    #playerHealthFill {
+      height: 100%;
+      width: 100%;
+      background: lime;
+    }
+
+    #crosshair {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 6px;
+      height: 6px;
+      background: white;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+    }
+
+    #gameOver {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      color: white;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      z-index: 20;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="hud">Score: 0</div>
+
+  <div id="playerHealth">
+    <div id="playerHealthFill"></div>
+  </div>
+
+  <div id="crosshair"></div>
+
+  <div id="gameOver">
+    <h1>GAME OVER</h1>
+    <p>Press R to Restart</p>
+  </div>
+
+  <!-- THREE.JS -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+
+  <!-- YOUR GAME -->
+  <script src="main.js"></script>
+
+</body>
+</html>
